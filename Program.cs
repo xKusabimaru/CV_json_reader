@@ -14,9 +14,13 @@ namespace CV_json_reader
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            FilesManager filesManager = new FilesManager();
+            CandidateManager cm = filesManager.manageLoader();
+            Candidate[] candidates = cm.GetAllCandidates();
+
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new Form1());
         }
     }
 }

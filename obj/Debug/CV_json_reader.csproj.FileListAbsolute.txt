@@ -1,0 +1,13 @@
+C:\Users\Khalid\Desktop\projects\CV_json_reader\bin\Debug\CV_json_reader.exe.config
+C:\Users\Khalid\Desktop\projects\CV_json_reader\bin\Debug\CV_json_reader.exe
+C:\Users\Khalid\Desktop\projects\CV_json_reader\bin\Debug\CV_json_reader.pdb
+C:\Users\Khalid\Desktop\projects\CV_json_reader\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Khalid\Desktop\projects\CV_json_reader\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Khalid\Desktop\projects\CV_json_reader\obj\Debug\CV_json_reader.csproj.AssemblyReference.cache
+C:\Users\Khalid\Desktop\projects\CV_json_reader\obj\Debug\CV_json_reader.Form1.resources
+C:\Users\Khalid\Desktop\projects\CV_json_reader\obj\Debug\CV_json_reader.Properties.Resources.resources
+C:\Users\Khalid\Desktop\projects\CV_json_reader\obj\Debug\CV_json_reader.csproj.GenerateResource.cache
+C:\Users\Khalid\Desktop\projects\CV_json_reader\obj\Debug\CV_json_reader.csproj.CoreCompileInputs.cache
+C:\Users\Khalid\Desktop\projects\CV_json_reader\obj\Debug\CV_json_reader.csproj.CopyComplete
+C:\Users\Khalid\Desktop\projects\CV_json_reader\obj\Debug\CV_json_reader.exe
+C:\Users\Khalid\Desktop\projects\CV_json_reader\obj\Debug\CV_json_reader.pdb
