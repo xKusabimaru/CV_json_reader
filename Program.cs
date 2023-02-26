@@ -18,6 +18,8 @@ namespace CV_json_reader
             CandidateManager cm = filesManager.manageLoader();
             Candidate[] candidates = cm.GetAllCandidates();
 
+            
+
             //Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());

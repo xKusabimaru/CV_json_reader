@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace CV_json_reader
 {
-    class Name
+    class Location
     {
-        private String name;
+        private String location;
 
-        public Name(String name)
+        public Location(String location)
         {
-            this.name = name;
+            this.location = location;
         }
 
-        public String getName()
+        public String getLocation()
         {
-            return name;
+            return location;
         }
     }
 }

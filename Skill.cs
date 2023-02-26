@@ -9,15 +9,21 @@ namespace CV_json_reader
     class Skill
     {
         private String skill;
+        private String skillType;
 
-        public Skill(String skill)
+        public Skill(String skill, String skillType)
         {
             this.skill = skill;
+            this.skillType = skillType;
         }
 
         public String getSkill()
         {
             return skill;
+        }
+        public String getSkillType()
+        {
+            return skillType;
         }
     }
 }

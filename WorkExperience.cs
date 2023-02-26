@@ -6,38 +6,38 @@ using System.Threading.Tasks;
 
 namespace CV_json_reader
 {
-    class Education
+    class WorkExperience
     {
+        private String jobTitle;
         private String organization;
-        private String education;
-        private String grade;
         private Location location;
+        private String jobDescription;
         private Date date;
 
-        public Education(String organization, String education, String grade, Location location, Date date)
+        public WorkExperience(String jobTitle, String organization, Location location, String jobDescription, Date date)
         {
+            this.jobTitle = jobTitle;
             this.organization = organization;
-            this.education = education;
-            this.grade = grade;
             this.location = location;
+            this.jobDescription = jobDescription;
             this.date = date;
         }
 
+        public String getJobTitle()
+        {
+            return jobTitle;
+        }
         public String getOrganization()
         {
             return organization;
         }
-        public String getEducation()
-        {
-            return education;
-        }
-        public String getGrade()
-        {
-            return grade;
-        }
         public String getLocation()
         {
             return location.getLocation();
+        }
+        public String getJobDescription()
+        {
+            return jobDescription;
         }
         public String getStartDate()
         {

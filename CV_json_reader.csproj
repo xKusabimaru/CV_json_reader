@@ -52,6 +52,7 @@
     <Compile Include="Candidate.cs" />
     <Compile Include="CandidateManager.cs" />
     <Compile Include="Certification.cs" />
+    <Compile Include="Date.cs" />
     <Compile Include="Education.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="FilesManager.cs" />
@@ -61,17 +62,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="JsonCertificationsReader.cs" />
-    <Compile Include="JsonEducationsReader.cs" />
-    <Compile Include="JsonEmailsReader.cs" />
     <Compile Include="JsonFilesFinder.cs" />
     <Compile Include="JsonLoader.cs" />
-    <Compile Include="JsonNameReader.cs" />
-    <Compile Include="JsonSkillsReader.cs" />
-    <Compile Include="Name.cs" />
+    <Compile Include="JsonReader.cs" />
+    <Compile Include="Language.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="PhoneNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Skill.cs" />
+    <Compile Include="Website.cs" />
+    <Compile Include="WorkExperience.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
