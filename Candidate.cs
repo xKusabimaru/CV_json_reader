@@ -8,23 +8,23 @@ namespace CV_json_reader
 {
     class Candidate
     {
-        private String name;
+        private Name name;
         private Email[] emails;
         private Education[] educations;
         private Skill[] skills;
         private Certification[] certifications;
         private PhoneNumber[] phoneNumbers;
         private Website[] websites;
-        private String dateOfBirth;
+        private BirthDate dateOfBirth;
         private Location location;
         private Language[] languages;
-        private int totalYearsExperience;
-        private String profession;
-        private String linkedin;
+        private Experience totalYearsExperience;
+        private Profession profession;
+        private Linkedin linkedin;
         private WorkExperience[] workExperiences;
 
-        public Candidate(String name, Email[] emails, Education[] educations, WorkExperience[] workExperiences, Skill[] skills, Certification[] certifications, PhoneNumber[] phoneNumbers,
-            Website[] websites, String dateOfBirth, Location location, Language[] languages, int totalYearsExperience, String profession, String linkedin)
+        public Candidate(Name name, Email[] emails, Education[] educations, WorkExperience[] workExperiences, Skill[] skills, Certification[] certifications, PhoneNumber[] phoneNumbers,
+            Website[] websites, BirthDate dateOfBirth, Location location, Language[] languages, Experience totalYearsExperience, Profession profession, Linkedin linkedin)
         {
             this.name = name;
             this.emails = emails;
@@ -43,7 +43,7 @@ namespace CV_json_reader
         }
         public String getName()
         {
-            return name;
+            return name.getName();
         }
 
         public String[] getEmails()
@@ -187,7 +187,7 @@ namespace CV_json_reader
         }
         public String getDateOfBirth()
         {
-            return dateOfBirth;
+            return dateOfBirth.getBirthDate();
         }
         public String getLocation()
         {
@@ -204,15 +204,15 @@ namespace CV_json_reader
         }
         public int getTotalYearsExperience()
         {
-            return totalYearsExperience;
+            return totalYearsExperience.getExperience();
         }
         public String getProfession()
         {
-            return profession;
+            return profession.getProfession();
         }
         public String getLinkedin()
         {
-            return linkedin;
+            return linkedin.getLinkedin();
         }
     }
 }

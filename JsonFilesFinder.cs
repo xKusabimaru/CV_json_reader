@@ -11,9 +11,9 @@ namespace CV_json_reader
     {
         private String directoryPath;
 
-        public JsonFilesFinder()
+        public JsonFilesFinder(String directoryPath)
         {
-            this.directoryPath = "../../jsons/";
+            this.directoryPath = directoryPath;
         }
         public String[] getJsonFiles()
         {

@@ -8,20 +8,6 @@ namespace CV_json_reader
 {
     class CandidateManager
     {
-        private String name;
-        private String[] emails;
-        private dynamic[][] educations;
-        private dynamic[][] workExperience;
-        private String[][] skills;
-        private String[] certifications;
-        private String[] phoneNumbers;
-        private String[] websites;
-        private String dateOfBirth;
-        private String location;
-        private String[] languages;
-        private int totalYearsExperience;
-        private String profession;
-        private String linkedin;
         private List<Candidate> candidates = new List<Candidate>();
 
         public CandidateManager()
@@ -29,22 +15,23 @@ namespace CV_json_reader
 
         }
 
-        public void createCandidate()
+        public void createCandidate(String name, String[] emails, dynamic[][] educations, dynamic[][] workExperiences, String[][] skills, String[] certifications, String[] phoneNumbers,
+                    String[] websites, String dateOfBirth, String location, String[] languages, int totalYearsExperience, String profession, String linkedin)
         {
-            String nameObj = name;
-            Email[] emailsObj = createEmails();
-            Education[] educationsObj = createEducations();
-            WorkExperience[] workExperiencesObj = createWorkExperiences();
-            Skill[] skillsObj = createSkills();
-            Certification[] certificationsObj = createCertifications();
-            PhoneNumber[] phoneNumbersObj = createPhoneNumbers();
-            Website[] websitesObj = createWebsites();
-            String dateOfBirthObj = dateOfBirth;
-            Location locationObj = createLocation();
-            Language[] languagesObj = createLanguages();
-            int totalYearsExperienceObj = totalYearsExperience;
-            String professionObj = profession;
-            String linkedinObj = linkedin;
+            Name nameObj = new Name(name);
+            Email[] emailsObj = createEmails(emails);
+            Education[] educationsObj = createEducations(educations);
+            WorkExperience[] workExperiencesObj = createWorkExperiences(workExperiences);
+            Skill[] skillsObj = createSkills(skills);
+            Certification[] certificationsObj = createCertifications(certifications);
+            PhoneNumber[] phoneNumbersObj = createPhoneNumbers(phoneNumbers);
+            Website[] websitesObj = createWebsites(websites);
+            BirthDate dateOfBirthObj = new BirthDate(dateOfBirth);
+            Location locationObj = createLocation(location);
+            Language[] languagesObj = createLanguages(languages);
+            Experience totalYearsExperienceObj = new Experience(totalYearsExperience);
+            Profession professionObj = new Profession(profession);
+            Linkedin linkedinObj = new Linkedin(linkedin);
 
         Candidate candidate = new Candidate(nameObj, emailsObj, educationsObj, workExperiencesObj, skillsObj, certificationsObj, phoneNumbersObj,
             websitesObj, dateOfBirthObj, locationObj, languagesObj, totalYearsExperienceObj, professionObj, linkedinObj);
@@ -56,7 +43,7 @@ namespace CV_json_reader
         {
             return candidates.ToArray();
         }
-        private Email[] createEmails()
+        private Email[] createEmails(String[] emails)
         {
             List<Email> emailsObj = new List<Email>();
             foreach (String email in emails)
@@ -67,7 +54,7 @@ namespace CV_json_reader
 
             return emailsObj.ToArray();
         }
-        private Education[] createEducations()
+        private Education[] createEducations(dynamic[][] educations)
         {
             List<Education> educationsObj = new List<Education>();
 
@@ -86,7 +73,7 @@ namespace CV_json_reader
 
             return educationsObj.ToArray();
         }
-        private WorkExperience[] createWorkExperiences()
+        private WorkExperience[] createWorkExperiences(dynamic[][] workExperience)
         {
             List<WorkExperience> workExperiencesObj = new List<WorkExperience>();
 
@@ -105,7 +92,7 @@ namespace CV_json_reader
 
             return workExperiencesObj.ToArray();
         }
-        private Skill[] createSkills()
+        private Skill[] createSkills(String[][] skills)
         {
             List<Skill> skillsObj = new List<Skill>();
 
@@ -121,7 +108,7 @@ namespace CV_json_reader
 
             return skillsObj.ToArray();
         }
-        private Certification[] createCertifications()
+        private Certification[] createCertifications(String[] certifications)
         {
             List<Certification> certificationsObj = new List<Certification>();
             foreach (String certification in certifications)
@@ -132,7 +119,7 @@ namespace CV_json_reader
 
             return certificationsObj.ToArray();
         }
-        private PhoneNumber[] createPhoneNumbers()
+        private PhoneNumber[] createPhoneNumbers(String[] phoneNumbers)
         {
             List<PhoneNumber> phoneNumbersObj = new List<PhoneNumber>();
             foreach (String phoneNumber in phoneNumbers)
@@ -143,7 +130,7 @@ namespace CV_json_reader
 
             return phoneNumbersObj.ToArray();
         }
-        private Website[] createWebsites()
+        private Website[] createWebsites(String[] websites)
         {
             List<Website> websitesObj = new List<Website>();
             foreach (String website in websites)
@@ -154,12 +141,12 @@ namespace CV_json_reader
 
             return websitesObj.ToArray();
         }
-        private Location createLocation()
+        private Location createLocation(String location)
         {
             Location locationObj = new Location(location);
             return locationObj;
         }
-        private Language[] createLanguages()
+        private Language[] createLanguages(String[] languages)
         {
             List<Language> languagesObj = new List<Language>();
             foreach (String language in languages)
@@ -169,62 +156,6 @@ namespace CV_json_reader
             }
 
             return languagesObj.ToArray();
-        }
-        public void setName(String name)
-        {
-            this.name = name;
-        }
-        public void setEmails(String[] emails)
-        {
-            this.emails = emails;
-        }
-        public void setEducations(dynamic[][] educations)
-        {
-            this.educations = educations;
-        }
-        public void setWorkExperiences(dynamic[][] workExperience)
-        {
-            this.workExperience = workExperience;
-        }
-        public void setSkills(String[][] skills)
-        {
-            this.skills = skills;
-        }
-        public void setCertifications(String[] certifications)
-        {
-            this.certifications = certifications;
-        }
-        public void setPhoneNumbers(String[] phoneNumbers)
-        {
-            this.phoneNumbers = phoneNumbers;
-        }
-        public void setWebsites(String[] websites)
-        {
-            this.websites = websites;
-        }
-        public void setDateOfBirth(String dateOfBirth)
-        {
-            this.dateOfBirth = dateOfBirth;
-        }
-        public void setLocation(String location)
-        {
-            this.location = location;
-        }
-        public void setLanguages(String[] languages)
-        {
-            this.languages = languages;
-        }
-        public void setTotalYearsExperience(int totalYearsExperience)
-        {
-            this.totalYearsExperience = totalYearsExperience;
-        }
-        public void setProfession(String profession)
-        {
-            this.profession = profession;
-        }
-        public void setLinkedin(String linkedin)
-        {
-            this.linkedin = linkedin;
         }
     }
 }

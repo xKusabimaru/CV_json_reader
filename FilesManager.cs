@@ -12,7 +12,7 @@ namespace CV_json_reader
 
         public FilesManager()
         {
-            JsonFilesFinder jff = new JsonFilesFinder();
+            JsonFilesFinder jff = new JsonFilesFinder("../../jsons/");
             this.fileNames = jff.getJsonFiles();
         }
 
@@ -41,22 +41,8 @@ namespace CV_json_reader
                 String location = reader.readLocation();
                 String[] languages = reader.readLanguages();
 
-                candidateManager.setName(name);
-                candidateManager.setEmails(emails);
-                candidateManager.setEducations(educations);
-                candidateManager.setWorkExperiences(workExperiences);
-                candidateManager.setSkills(skills);
-                candidateManager.setCertifications(certifications);
-                candidateManager.setPhoneNumbers(phoneNumbers);
-                candidateManager.setWebsites(websites);
-                candidateManager.setDateOfBirth(dateOfBirth);
-                candidateManager.setLocation(location);
-                candidateManager.setLanguages(languages);
-                candidateManager.setTotalYearsExperience(totalYearsExperience);
-                candidateManager.setProfession(profession);
-                candidateManager.setLinkedin(linkedin);
-
-                candidateManager.createCandidate();
+                candidateManager.createCandidate(name, emails, educations, workExperiences, skills, certifications, phoneNumbers,
+                    websites, dateOfBirth, location, languages, totalYearsExperience, profession, linkedin);
             }
             return candidateManager;
         }

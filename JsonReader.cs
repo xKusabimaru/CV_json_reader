@@ -26,7 +26,7 @@ namespace CV_json_reader
             }
             else
             {
-                return "";
+                return "Not Provided";
             }
         }
         public int readTotalYearsExperience()
@@ -68,7 +68,7 @@ namespace CV_json_reader
                 }
                 else
                 {
-                    educationArray[3] = "";
+                    educationArray[3] = "Not Provided";
                 }
                 if (education.Dates != null)
                 {
@@ -78,8 +78,8 @@ namespace CV_json_reader
                 }
                 else
                 {
-                    educationArray[4] = "";
-                    educationArray[5] = "";
+                    educationArray[4] = "Not Provided";
+                    educationArray[5] = "Not Provided";
                     educationArray[6] = false;
                 }
                 educationsList.Add(educationArray);
@@ -102,7 +102,7 @@ namespace CV_json_reader
                 }
                 else
                 {
-                    workExperienceArray[2] = "";
+                    workExperienceArray[2] = "Not Provided";
                 }
                 workExperienceArray[3] = (String)workExperience.JobDescription;
                 if (workExperience.Dates != null)
@@ -113,8 +113,8 @@ namespace CV_json_reader
                 }
                 else
                 {
-                    workExperienceArray[4] = "";
-                    workExperienceArray[5] = "";
+                    workExperienceArray[4] = "Not Provided";
+                    workExperienceArray[5] = "Not Provided";
                     workExperienceArray[6] = false;
                 }
                 workExperiencesList.Add(workExperienceArray);
@@ -186,7 +186,7 @@ namespace CV_json_reader
             {
                 return (String)array.Value.Data.Location.Formatted;
             }
-            return "";
+            return "Not Provided";
         }
         
     }
