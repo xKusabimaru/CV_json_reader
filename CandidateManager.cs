@@ -27,7 +27,7 @@ namespace CV_json_reader
             PhoneNumber[] phoneNumbersObj = createPhoneNumbers(phoneNumbers);
             Website[] websitesObj = createWebsites(websites);
             BirthDate dateOfBirthObj = new BirthDate(dateOfBirth);
-            Location locationObj = createLocation(location);
+            Location locationObj = new Location(location);
             Language[] languagesObj = createLanguages(languages);
             Experience totalYearsExperienceObj = new Experience(totalYearsExperience);
             Profession professionObj = new Profession(profession);
@@ -39,7 +39,7 @@ namespace CV_json_reader
             candidates.Add(candidate);
         }
         
-        public Candidate[] GetAllCandidates()
+        public Candidate[] getAllCandidates()
         {
             return candidates.ToArray();
         }
@@ -140,11 +140,6 @@ namespace CV_json_reader
             }
 
             return websitesObj.ToArray();
-        }
-        private Location createLocation(String location)
-        {
-            Location locationObj = new Location(location);
-            return locationObj;
         }
         private Language[] createLanguages(String[] languages)
         {
