@@ -132,7 +132,7 @@ namespace CV_json_reader
             for (int i = 0; i < candidates[index].getWorkExperiencesJobTitle().Length; i++)
             {
                 workExperienceViewer.Items.Add("JobTitle: " + candidates[index].getWorkExperiencesJobTitle()[i]);
-                workExperienceViewer.Items.Add("JobDescription: " + candidates[index].getWorkExperiencesJobDescription()[i]);
+                //workExperienceViewer.Items.Add("JobDescription: " + candidates[index].getWorkExperiencesJobDescription()[i]);
                 workExperienceViewer.Items.Add("Organization: " + candidates[index].getWorkExperiencesOrganization()[i]);
                 workExperienceViewer.Items.Add("Location: " + candidates[index].getWorkExperiencesLocation()[i]);
                 workExperienceViewer.Items.Add("Date: " + candidates[index].getWorkExperiencesDate()[i]);
